@@ -14,7 +14,7 @@ spec:
    spec:     # pod spec                  
      containers:
      - name: hello-containers
-       image: us.icr.io/cldstd37-ns/hello-containers:latest
+       image: us.icr.io/cldstd37-ns/hello-containers-20200623155903894:latest
        ports:
          - containerPort: 8080
        env:
