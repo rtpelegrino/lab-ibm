@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: NAME_APPLICATION
+spec:
+ replicas: 2
+ selector:
+     matchLabels:
+       app: NAME_APPLICATION
+ template:
+   metadata:
+     labels:
+       app: NAME_APPLICATION
+   spec:     # pod spec                  
+     containers:
+     - name: NAME_IMAGE
+       image: us.icr.io/NAMESPACE/NAME_IMAGE:latest
+       ports:
+         - containerPort: 8080
+       env:
+         - name: APIKEY
+           value: VALUE_APIKEY_ASSISTANT
+         - name: URL
+           value: VALUE_URL_ASSISTANT
+         - name: ASSISTANT_ID
+           value: VALUE_SKILL_ID_ASSISTANT
+       imagePullPolicy: Never
