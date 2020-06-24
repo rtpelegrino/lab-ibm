@@ -24,4 +24,4 @@ spec:
            value: https://api.us-south.assistant.watson.cloud.ibm.com/instances/73d81d29-458c-451d-8bb2-e079ab2f762e
          - name: ASSISTANT_ID
            value: 25f1e69d-8ec3-4181-8b1a-9c548ac3baef
-       imagePullPolicy: Never
+       imagePullPolicy: Always
