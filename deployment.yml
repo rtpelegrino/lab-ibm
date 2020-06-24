@@ -1,20 +1,20 @@
-apiVersion: apps/v1
+Version: apps/v1
 kind: Deployment
 metadata:
- name: rtpelegrino/chat-backend
+ name: node-web-app
 spec:
  replicas: 2
  selector:
      matchLabels:
-       app: rtpelegrino/chat-backend
+       app: node-web-app
  template:
    metadata:
      labels:
-       app: rtpelegrino/chat-backend
-   spec:     # pod spec                  
+       app: node-web-app
+   spec:
      containers:
-     - name: hello-containers
-       image: us.icr.io/cldstd37-ns/hello-containers-20200623155903894:latest
+     - name: node-web-app
+       image: us.icr.io/cldstd37-ns/node-web-app:latest
        ports:
          - containerPort: 8080
        env:
